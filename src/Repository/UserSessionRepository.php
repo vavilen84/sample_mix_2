@@ -31,6 +31,8 @@ class UserSessionRepository extends ServiceEntityRepository
         if (!empty($userSession)){
             return $userSession->getUser();
         }
+
+        return null;
     }
 
     // /**
