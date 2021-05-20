@@ -32,7 +32,7 @@ class ApiKeyAuthenticator extends AbstractGuardAuthenticator
 
     public function supports(Request $request): bool
     {
-        return $request->headers->get(AuthHelper::API_KEY_HEADER_NAME);
+        return $request->headers->has(AuthHelper::API_KEY_HEADER_NAME);
     }
 
     public function getCredentials(Request $request)
